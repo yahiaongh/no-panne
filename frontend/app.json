@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "No Panne",
+    "slug": "no-panne",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#020617",
+    "splash": {
+      "backgroundColor": "#020617"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "dz.nopanne.app"
+    },
+    "android": {
+      "package": "dz.nopanne.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#020617"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
