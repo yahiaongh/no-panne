@@ -1,0 +1,12 @@
+#!/bin/bash
+# Run PHP CLI inside the wrenchgo-php Docker image.
+# Usage: dev/bin/php [php-args...]
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+TTY_FLAG=""
+if [ -t 1 ]; then TTY_FLAG="-t"; fi
+exec docker run --rm -i $TTY_FLAG \
+  -v "$REPO_ROOT:/app" -w /app/backend --network wrenchgo \
+  -e APP_VOLUME=/app/backend \
+  wrenchgo-php php "$@"

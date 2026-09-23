@@ -19,6 +19,3 @@ expo-env.d.ts
 .DS_Store
 .idea/
 .vscode/
-
-## Backend (prepared for future work)
-backend/
