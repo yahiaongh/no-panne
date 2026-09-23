@@ -69,6 +69,11 @@ class User extends Authenticatable
         return $this->role_type === UserRole::Client;
     }
 
+    public function isAdmin(): bool
+    {
+        return $this->role_type === UserRole::Admin;
+    }
+
     public function isActive(): bool
     {
         if ($this->client !== null) {

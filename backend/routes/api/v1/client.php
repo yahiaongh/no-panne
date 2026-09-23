@@ -11,8 +11,8 @@ Route::prefix('client')->middleware(['auth:sanctum'])->group(function () {
 
     Route::get('/requests', [ClientRequestController::class, 'index']);
     Route::post('/requests', [ClientRequestController::class, 'store']);
-    Route::get('/requests/{request}', [ClientRequestController::class, 'show']);
-    Route::post('/requests/{request}/cancel', [ClientRequestController::class, 'cancel']);
+    Route::get('/requests/{serviceRequest}', [ClientRequestController::class, 'show']);
+    Route::post('/requests/{serviceRequest}/cancel', [ClientRequestController::class, 'cancel']);
 
     Route::get('/providers/nearby', [ClientProviderController::class, 'nearby']);
     Route::get('/providers/{provider}', [ClientProviderController::class, 'show']);

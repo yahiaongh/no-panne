@@ -8,7 +8,6 @@ use App\Contracts\Integrations\OtpServiceInterface;
 use App\Exceptions\Api\ApiException;
 use App\Models\OtpCode;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\RateLimiter;
 
 /**
  * Local OTP lifecycle (BRD §6.1 / §10):
@@ -24,8 +23,7 @@ class OtpService
 {
     public function __construct(
         private readonly OtpServiceInterface $otpDeliverer,
-    ) {
-    }
+    ) {}
 
     public function send(string $phone): array
     {

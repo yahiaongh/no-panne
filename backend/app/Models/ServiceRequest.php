@@ -82,22 +82,22 @@ class ServiceRequest extends Model
 
     public function photos(): HasMany
     {
-        return $this->hasMany(RequestPhoto::class);
+        return $this->hasMany(RequestPhoto::class, 'request_id');
     }
 
     public function statusHistory(): HasMany
     {
-        return $this->hasMany(RequestStatusHistory::class);
+        return $this->hasMany(RequestStatusHistory::class, 'request_id');
     }
 
     public function assignments(): HasMany
     {
-        return $this->hasMany(RequestAssignment::class);
+        return $this->hasMany(RequestAssignment::class, 'request_id');
     }
 
     public function review(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
-        return $this->hasOne(Review::class);
+        return $this->hasOne(Review::class, 'request_id');
     }
 
     public function isActive(): bool

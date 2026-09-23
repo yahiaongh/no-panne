@@ -18,9 +18,7 @@ use Illuminate\Http\Request;
 
 class OtpAuthController extends Controller
 {
-    public function __construct(private readonly OtpService $otpService)
-    {
-    }
+    public function __construct(private readonly OtpService $otpService) {}
 
     /**
      * POST /api/v1/auth/send-otp

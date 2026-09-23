@@ -12,6 +12,8 @@ class RequestStatusHistory extends Model
 {
     use HasFactory;
 
+    protected $table = 'request_status_history';
+
     protected $fillable = [
         'request_id',
         'from_status',
