@@ -10,7 +10,7 @@ class SettingSeeder extends Seeder
     public function run(): void
     {
         $settings = [
-            ['app.name', 'WrenchGo', 'general', 'Nom public de la plateforme'],
+            ['app.name', 'No Panne', 'general', 'Nom public de la plateforme'],
             ['app.locale', 'fr', 'general', 'Langue par défaut'],
             ['otp.ttl_minutes', 5, 'otp', 'Durée de validité d\'un code OTP'],
             ['otp.resend_cooldown_seconds', 60, 'otp', 'Délai minimum entre deux envois'],

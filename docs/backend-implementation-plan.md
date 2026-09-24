@@ -1,4 +1,4 @@
-# WrenchGo Backend — Implementation Plan
+# No Panne Backend — Implementation Plan
 
 Status: In progress (initial milestone)
 Date: 2026-09-23
@@ -9,13 +9,13 @@ Author: Backend engineering session
 - The repository is a monorepo with an existing **Expo (React Native) frontend** under
   `frontend/`. No backend code existed.
 - **Backend bootstrapped this session:** Laravel 11.6.1 at `backend/`, running on
-  PHP 8.3.33 inside a local Docker image (`wrenchgo-php`) because the host has no
+  PHP 8.3.33 inside a local Docker image (`no-panne-php`) because the host has no
   root/system PHP. Database is **PostgreSQL 16 + PostGIS 3.4** in a Docker container
-  (`wrenchgo-pg`).
+  (`no-panne-pg`).
 - Dependencies installed: `laravel/sanctum` (default), `spatie/laravel-permission`
   (RBAC). Default Laravel migrations run cleanly against Postgres; the stock test
   suite passes (2/2).
-- No `.env` secrets: local dev credentials only (`wrenchgo`/`secret`).
+- No `.env` secrets: local dev credentials only (`no_panne`/`secret`).
 - No official 48-wilaya / 1541-commune dataset exists in the repository. Schema +
   deterministic fixtures are created now; authoritative data import is a documented
   task.

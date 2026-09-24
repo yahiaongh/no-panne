@@ -1,9 +1,9 @@
 #!/bin/bash
 # Run a command in the PostGIS database container.
-# Usage: dev/bin/db [psql-args...]   (defaults to interactive psql as wrenchgo)
+# Usage: dev/bin/db [psql-args...]   (defaults to interactive psql as no_panne)
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 TTY_FLAG=""
 if [ -t 1 ]; then TTY_FLAG="-t"; fi
-exec docker exec -i $TTY_FLAG wrenchgo-pg psql -U wrenchgo -d wrenchgo "$@"
+exec docker exec -i $TTY_FLAG no-panne-pg psql -U no_panne -d no_panne "$@"
